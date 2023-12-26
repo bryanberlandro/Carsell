@@ -26,15 +26,19 @@ function showFavorite(){
         favContainer.classList.remove('md:opacity-0')
         favContainer.classList.remove('xl:opacity-0')
     }, 0)
-    console.log('can')
 }
 
 function closeFavorite(){
     favCard.classList.add('translate-y-[800px]')
     favContainer.classList.add('opacity-0')
+    favContainer.classList.add('md:opacity-0')
+    favContainer.classList.add('xl:opacity-0')
     
     setTimeout(()=> {
-        favContainer.classList.add('hidden')
+    favContainer.classList.add('hidden')
+    favContainer.classList.add('md:hidden')
+    favContainer.classList.remove('md:flex')
+    favContainer.classList.add('xl:hidden')
     }, 300)
 }
 // Favorite
