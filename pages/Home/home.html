@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARSELL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body class="font-montserat"> 
+
+    <!-- favorite -->
+    <div class="favorite-container opacity-0 transition-all duration-300 w-full  hidden h-[100vh] fixed bg-slate-300 bg-opacity-35 backdrop-blur-sm z-50 md:flex md:hidden md:justify-center  md:items-center xl:hidden">
+        <div class="favorite-card fixed translate-y-[800px] transition-all duration-500 h-[80vh] py-4 bottom-0 w-full bg-white z-50 rounded-t-xl overflow-hidden md:w-[60%] md:h-max md:translate-y-0 md:py-4 md:relative md:inset-0 md:rounded-lg xl:w-[30%]">
+            <!-- top -->
+            <div class="flex flex-col gap-6 w-full bg-slate-50">
+                <div class="w-full flex justify-between p-4 md:px-8">
+                    <div class="space-y-2 md:text-center md:w-full">
+                        <h1 class="font-bold text-lg">Welcome back</h1>
+                        <p class="text-sm">Don't have an account yet? <a href="#" class="text-secondary">Register here</a></p>
+                    </div>
+                    <div onclick="closeFavorite()" class="cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-secondary">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="flex gap-2 px-4 justify-center md:px-8">
+                    <div class="py-2 px-4 flex border-2 rounded-md gap-3 justify-center shadow-md text-sm items-center font-semibold bg-white md:w-80 md:py-3 xl:py-2 xl:gap-6 xl:w-64">
+                        <div class="relative w-[15%] overflow-hidden">
+                            <img src="/assets/images/google.png" alt="">
+                        </div>
+                        <h1>Google</h1>
+                    </div>
+                    <div class="py-2 px-4 flex border-2 rounded-md gap-3 justify-center shadow-md text-sm items-center font-semibold bg-white md:w-80 md:py-3 xl:py-2 xl:gap-6 xl:w-64">
+                        <div class="relative w-[15%]">
+                            <img src="/assets/images/facebook.png" alt="">
+                        </div>
+                        <h1>Facebook</h1>
+                    </div>
+                </div>
+
+                <div class="w-full items-center flex justify-between gap-2">
+                    <span class="w-full bg-slate-400 h-[0.5px]"></span>
+                    <p class="text-xs w-80 text-center text-slate-500 tracking-wide">or via e-mail</p>
+                    <span class="w-full bg-slate-400 h-[0.5px]"></span>
+                </div>
+
+            </div>
+            <!-- top -->
+
+            <!-- bottom -->
+            <div class="p-4 w-full  bg-white md:px-8">
+                <form action="" class="w-full mt-2">
+                    <h1 class="font-semibold text-sm">LOGIN</h1>
+                    <div class="w-full flex flex-col gap-4 mt-4">
+                        <div class="border-2 border-tertiary border-opacity-30 py-2 px-3 rounded-sm">
+                            <input type="text" placeholder="Email">
+                        </div>
+                        <div class="flex justify-between border-2 border-tertiary border-opacity-30 py-2 px-3 rounded-sm items-center">
+                            <input type="text" placeholder="Password">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>                          
+                        </div>
+                        <div class="w-full flex justify-end">
+                            <a href="" class="font-semibold text-secondary text-sm">Forget your password?</a>
+                        </div>
+                    </div>
+                </form>
+                <button class="bg-gradient-to-l from-primary to-tertiary py-4 px-4 w-full text-white mt-10 text-lg rounded-md font-semibold tracking-wider">
+                    Login
+                </button>
+            </div>
+            <!-- bottom -->
+        </div>
+    </div>
+    <!-- favorite -->
+
+    <header class="text-primary w-full h-16 flex border-b-2 px-[5%] items-center bg-white fixed justify-between z-40">
+        <div class="flex flex-row-reverse w-[60%] items-center justify-between h-full xl:flex-row xl:justify-start xl:gap-10">
+            <h1 class="font-bold text-xl">CARSELL</h1>
+            <div onclick="showSidebar()" class="relative xl:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                </svg>                  
+            </div>
+            <nav class="sidebar absolute top-0 left-0 bg-white w-52 h-[100vh] pt-10 pl-4 -translate-x-[250px] transition-all duration-500 ease-in-out shadow-md xl:relative xl:translate-x-0 xl:w-max xl:shadow-none xl:gap-14 xl:h-max xl:p-0">
+                <div onclick="closeSidebar()" class="absolute block right-2 top-2 xl:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>                  
+                </div>
+                <ul class="flex flex-col gap-6 font-medium xl:flex-row xl:text-sm ">
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Buy</a>
+                    </li>
+                    <li>
+                        <a href="pagehow/index.html">How it works</a>
+                    </li>
+                    <li>
+                        <a href="">Review</a>
+                    </li>
+                    <li>
+                        <a href="">Services</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="flex gap-4">
+            <div onclick="showFavorite()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                </svg>                  
+            </div>
+            <div onclick="showProfile()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>                  
+            </div>
+        </div>
+    </header>
+
+
+    <main class="">
+        <section class="w-full relative h-[100vh] bg-gradient-to-b from-tertiary flex flex-col xl:bg-opacity-45 xl:h-[100vh]">
+            <img src="/assets/images/car-2.jpg" alt="" class="w-full mix-blend-multiply absolute top-10 xl:top-0 xl:mix-blend-multiply ">
+            <div class="px-[5%] translate-y-44 flex justify-center flex-col items-center gap-6 w-full h-[100vh] relative z-10 md:gap-10 md:translate-y-0 xl:flex xl:items-start xl:justify-between xl:gap-10 xl:pt-44 ">
+                <!-- Choose Your Car -->
+                <div class="w-full relative flex flex-col justify-between bg-white rounded-md xl:w-[60%]">
+                    <div class="py-4 px-4 md:py-6 md:px-6 xl:px-8 xl:py-8">
+                        <h1 class="font-semibold text-xl xl:text-4xl xl:font-bold">Choose Your Car</h1>
+                        <p class="text-sm xl:text-lg ">We inspect it and deliver it</p>
+                        <div class="w-full mt-4 flex flex-wrap justify-between gap-2 md:justify-start md:mt-8 md:gap-3 xl:items-start xl:justify-start">
+                            
+                            <div class="w-[48%] h-10 border-2 flex items-center px-2 rounded-md md:w-[32%]  ">
+                                <input type="text" placeholder="Type" class="w-full h-full focus:outline-none text-sm">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>                                  
+                                </div>
+                            </div>
+                            <div class="w-[48%] h-10 border-2 flex items-center px-2 rounded-md md:w-[32%] ">
+                                <input type="text" placeholder="Choose model" class="w-full h-full focus:outline-none text-sm">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>                                  
+                                </div>
+                            </div>
+                            <div class="w-[48%] h-10 border-2 flex items-center px-2 rounded-md md:w-[32%] ">
+                                <input type="text" placeholder="Mileage" class="w-full h-full focus:outline-none text-sm">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>                                  
+                                </div>
+                            </div>
+                            <div class="w-[48%] h-10 border-2 flex items-center px-2 rounded-md md:w-[32%] ">
+                                <input type="text" placeholder="Registration from" class="w-full h-full focus:outline-none text-sm">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>                                  
+                                </div>
+                            </div>
+                            <div class="w-[48%] h-10 border-2 flex items-center px-2 rounded-md md:w-[32%] ">
+                                <input type="text" placeholder="Price up to" class="w-full h-full focus:outline-none text-sm">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>                                  
+                                </div>
+                            </div>
+                            
+                            <div class="w-full mt-4 flex flex-col gap-2 md:flex-row md:mt-8">
+                                <button class="bg-gradient-to-r w-full py-2 text-white rounded-md from-tertiary to-primary font-semibold md:py-4">
+                                    1 459 000 Offers
+                                </button>
+                                <button class="w-full py-2 font-semibold text-secondary md:py-4">
+                                    Advanced Search
+                                </button>
+                            </div>
+                    </div>
+
+                        
+                    </div>
+                    
+                </div>
+                <!-- Choose Your Car -->
+
+                <!-- Reviews -->
+                <div class="flex items-center gap-3 xl:text-white xl:justify-start xl:w-full">
+                    <h1 class="font-semibold text-2xl">4.8</h1>
+                    <div class="flex gap-1 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-yellow-400 ">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-yellow-400 ">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-yellow-400 ">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-yellow-400 ">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 ">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <p class="text-sm">1.648 Reviews</p>
+                </div>
+                <!-- Reviews -->
+
+                <!-- Utility -->
+                <div class="w-full bg-white h-max relative flex flex-col shadow-md gap-2 rounded-md md:py-2 md:flex-row md:h-20 xl:h-max xl:mt-16 xl:items-center z-10">
+                    
+                    <!-- 1 -->
+                    <div class="utility cursor-pointer w-full h-max border-b-2 overflow-hidden text-sm flex items-center flex-col px-4 md:border-r-2 md:border-b-0 md:overflow-visible xl:h-24 xl:justify-center">
+                        <div class="w-full flex justify-between h-16 items-center z-10 bg-white">
+                            <div class="flex gap-4">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>                              
+                                </div>
+                                <div>
+                                    <h1 class="font-semibold text-base text-primary">Money Back Guarantee</h1>
+                                    <p class="hidden xl:block">If you don't fall in love with the vehicle, simply return it to us</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>                              
+                            </div>
+                        </div>
+                        <div class="utility-desc border-t-2 w-full px-4 py-4 space-y-2 text-sm hidden transition-all duration-300 top-0 md:w-96 md:bg-white md:border-t-0 md:absolute md:left-0 md:top-24 md:shadow-md md:rounded-md xl:top-32 xl:space-y-4">
+                            <h1 class="font-bold text-base">Can I really return the car?</h1>
+                            <p><b class="font-semibold">Of course, you can.</b> We trust our service and know that <b class="font-semibold">we only sell inspected vehicles in excellent technical condition.</b> together with our customers we are fighting for better vehicles on Depok Roads</p>
+                            <p><b class="font-semibold">Carsell, therefore, always assumes all risks connected with the vehicle.</b> and if you simply don't like the car, <b class="font-semibold">you can return it to us up to 14 days after receiving it</b></p>
+                        </div>
+                    </div>
+                    <!-- 1 -->
+
+                    <!-- 2 -->
+                    <div class="utility w-full cursor-pointer overflow-hidden relative h-max border-b-2 text-sm flex items-center flex-col px-4 justify-between md:border-r-2 md:border-b-0 md:overflow-visible xl:h-24 xl:justify-center">
+                        <div class="w-full flex justify-between h-16 items-center z-10 bg-white">
+                            <div class="flex gap-4">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h1 class="font-semibold text-base text-primary">Safe Purchase</h1>
+                                    <p class="hidden xl:block">We guarantee the technical condition of every vehicle sold</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>                              
+                            </div>
+                        </div>
+                        <div class="utility-desc border-t-2 w-full px-4 py-4 space-y-2 text-sm hidden transition-all duration-300 relative md:w-96 md:bg-white md:border-t-0 md:absolute md:left-0 md:top-24 md:shadow-md md:rounded-md xl:top-32 xl:space-y-4">
+                            <h1 class="font-bold text-base">You don't risk anything buying</h1>
+                            <p><b class="font-semibold">Carsell is the safest way of buying a used car</b> first of all carefully examine the chosen car and <b class="font-semibold">you then decide on the basis of its currennt condition</b> and our recommendation</p>
+                            <p>You always sign the contract with Carsell, so<b class="font-semibold"> all guarantees are provided by us</b> wherever the car is from, you always make the payment to a local account in your local currency</p>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    
+                    <!-- 3 -->
+                    <div class="utility w-full relative h-max text-sm flex flex-col overflow-hidden cursor-pointer items-center px-4 justify-between md:overflow-visible xl:h-24 xl:justify-center">
+                        <div class="w-full flex justify-between h-16 items-center z-10 bg-white">
+                            <div class="flex gap-4">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.25-8.25-3.286Zm0 13.036h.008v.008H12v-.008Z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h1 class="font-semibold text-base text-primary">6-Month Warranty</h1>
+                                    <p class="hidden xl:block">In addition, with every car you receive an extended warranty</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>                              
+                            </div>
+                        </div>
+                        <div class="utility-desc border-t-2 w-full px-4 py-4 space-y-2 text-sm hidden transition-all duration-300 relative md:w-96 md:bg-white md:border-t-0 md:absolute md:right-0 md:top-24 md:shadow-md md:rounded-md xl:top-32 xl:space-y-4">
+                            <h1 class="font-bold text-base">You receive an extended warranty on the car</h1>
+                            <p>For even greater peace of mind, aside from the warranty for hidden defects, you also have from us<b class="font-semibold"> an extended 6-month warranty on the essentials</b> - the engine, gearbox and differential</p>
+                            <p>If you want even more, you can choose a longer period of coverage for other parts of the vehicle in the order</p>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    
+                </div>
+
+                <!-- Utility -->
+            
+            </div>
+            
+
+        </section>
+        <section class="w-full h-[100vh]">
+
+        </section>
+    </main>
+
+
+    <script src="home.js"></script>
+</body>
+</html>
