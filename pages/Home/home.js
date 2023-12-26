@@ -17,6 +17,7 @@ const favCard = document.querySelector('.favorite-card')
 function showFavorite(){
     favContainer.classList.remove('hidden')
     favContainer.classList.remove('md:hidden')
+    favContainer.classList.add('md:flex')
     favContainer.classList.remove('xl:hidden')
 
     setTimeout(()=> {
