@@ -109,7 +109,7 @@ function showLogin(){
 const navplus = document.querySelector('.navplus');
 
 window.addEventListener('scroll', function() {
-    if(this.window.scrollY > 20000) {
+    if(this.window.scrollY > 200) {
         navplus.classList.replace('xl:hidden', 'xl:flex');
     } else {
         navplus.classList.replace('xl:flex', 'xl:hidden');
@@ -138,3 +138,27 @@ utilityList[2].addEventListener('click', () => {
     utilityDesc[1].classList.add('hidden')
     utilityDesc[2].classList.toggle('hidden')
 })
+
+
+//utility 01 
+const HowUtilityList = document.querySelectorAll('.how-utility')
+const HowUtilityDesc = document.querySelectorAll('.how-utility-desc')
+
+HowUtilityList[0].addEventListener('click', () => {
+    HowUtilityDesc[0].classList.toggle('hidden')
+    HowUtilityDesc[1].classList.add('hidden')
+    HowUtilityDesc[2].classList.add('hidden')
+})
+
+HowUtilityList[1].addEventListener('click', () => {
+    HowUtilityDesc[0].classList.add('hidden')
+    HowUtilityDesc[1].classList.toggle('hidden')
+    HowUtilityDesc[2].classList.add('hidden')
+}
+)
+HowUtilityList[2].addEventListener('click', () => {
+    HowUtilityDesc[0].classList.add('hidden')
+    HowUtilityDesc[1].classList.add('hidden')
+    HowUtilityDesc[2].classList.toggle('hidden')
+})
+
