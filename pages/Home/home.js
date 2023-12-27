@@ -10,38 +10,42 @@ function closeSidebar(){
 }
 // Header
 
-// Favorite
-const favContainer = document.querySelector('.favorite-container')
-const favCard = document.querySelector('.favorite-card')
+const loginContainer = document.querySelector('.login-container')
+const loginCard = document.querySelector('.login-card')
 
+
+
+// Favorite > Login
 function showFavorite(){
-    favContainer.classList.remove('hidden')
-    favContainer.classList.remove('md:hidden')
-    favContainer.classList.add('md:flex')
-    favContainer.classList.remove('xl:hidden')
+    loginContainer.classList.replace('hidden', 'flex')
+    // loginContainer.classList.remove('md:hidden')
+    // loginContainer.classList.add('md:flex')
+    // loginContainer.classList.remove('xl:hidden')
 
     setTimeout(()=> {
-        favCard.classList.remove('translate-y-[800px]')
-        favContainer.classList.remove('opacity-0')
-        favContainer.classList.remove('md:opacity-0')
-        favContainer.classList.remove('xl:opacity-0')
+        loginCard.classList.remove('translate-y-[800px]')
+        loginContainer.classList.remove('opacity-0')
+        loginContainer.classList.remove('md:opacity-0')
+        loginContainer.classList.remove('xl:opacity-0')
     }, 0)
 }
 
 function closeFavorite(){
-    favCard.classList.add('translate-y-[800px]')
-    favContainer.classList.add('opacity-0')
-    favContainer.classList.add('md:opacity-0')
-    favContainer.classList.add('xl:opacity-0')
+    loginCard.classList.add('translate-y-[800px]')
+    loginContainer.classList.add('opacity-0')
+    loginContainer.classList.add('md:opacity-0')
+    loginContainer.classList.add('xl:opacity-0')
     
     setTimeout(()=> {
-    favContainer.classList.add('hidden')
-    favContainer.classList.add('md:hidden')
-    favContainer.classList.remove('md:flex')
-    favContainer.classList.add('xl:hidden')
+    loginContainer.classList.replace('flex', 'hidden')
+    // loginContainer.classList.add('md:hidden')
+    loginContainer.classList.remove('md:flex')
+    // loginContainer.classList.add('xl:hidden')
     }, 300)
 }
-// Favorite
+// Favorite > Login
+
+
 
 
 // PROFILE
@@ -63,6 +67,7 @@ profileIcon.addEventListener('mouseleave', function(){
     desktopProfileHover.classList.add('-translate-y-[500px]')
 })
 
+
 function showProfile(){
     profileContainer.classList.replace('hidden', 'flex')
     setTimeout(()=> {
@@ -78,6 +83,25 @@ function closeProfile(){
     profileContainer.classList.add('opacity-0')
     profileCard.classList.add('translate-x-[400px]')
 }
+
+// Profile > Login
+function showLogin(){
+    loginContainer.classList.replace('hidden', 'flex')
+    setTimeout(()=> {
+        profileContainer.classList.replace('flex', 'hidden')
+    }, 300)
+    profileContainer.classList.add('opacity-0')
+    profileCard.classList.add('translate-x-[400px]')    
+
+    setTimeout(()=> {
+        loginCard.classList.remove('translate-y-[800px]')
+        loginContainer.classList.remove('opacity-0')
+        loginContainer.classList.remove('md:opacity-0')
+        loginContainer.classList.remove('xl:opacity-0')
+    }, 0)
+}
+// Profile > Login
+
 // PROFILE
 
 

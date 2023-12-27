@@ -20,7 +20,7 @@ module.exports = {
         'size-200': '200% 200%',
       },
       backgroundPosition: {
-        'pos-0': '0% 0%',
+        'pos-0': '30% 0%',
         'pos-100': '100% 100%',
       },
     },
