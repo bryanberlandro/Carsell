@@ -8,6 +8,7 @@ module.exports = {
         'Russo': 'Russo One, sans-serif'
       },
       colors: {
+        'dark': '#200E3A',
         'primary': '#191D88',
         'secondary': '#1450A3',
         'tertiary': '#337CCF',
