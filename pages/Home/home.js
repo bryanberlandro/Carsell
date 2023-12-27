@@ -44,6 +44,43 @@ function closeFavorite(){
 // Favorite
 
 
+// PROFILE
+const profileContainer = document.querySelector('.profile-container');
+const profileCard = document.querySelector('.profile-card');
+const profileIcon = document.querySelector('.profile-icon');
+const desktopProfileHover = document.querySelector('.desktop-profile')
+
+profileIcon.addEventListener('mouseover', function(){
+    desktopProfileHover.classList.remove('opacity-0')
+    desktopProfileHover.classList.remove('-translate-y-[500px]')
+})
+desktopProfileHover.addEventListener('mouseleave', function(){
+    desktopProfileHover.classList.add('opacity-0')
+    desktopProfileHover.classList.add('-translate-y-[500px]')
+})
+profileIcon.addEventListener('mouseleave', function(){
+    desktopProfileHover.classList.add('opacity-0')
+    desktopProfileHover.classList.add('-translate-y-[500px]')
+})
+
+function showProfile(){
+    profileContainer.classList.replace('hidden', 'flex')
+    setTimeout(()=> {
+        profileContainer.classList.remove('opacity-0')
+        profileCard.classList.remove('translate-x-[400px]')
+    }, 0)
+}
+
+function closeProfile(){
+    setTimeout(()=> {
+        profileContainer.classList.replace('flex', 'hidden')
+    }, 300)
+    profileContainer.classList.add('opacity-0')
+    profileCard.classList.add('translate-x-[400px]')
+}
+// PROFILE
+
+
 
 // Hero Section
 const utilityList = document.querySelectorAll('.utility')

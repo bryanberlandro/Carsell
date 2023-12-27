@@ -12,7 +12,17 @@ module.exports = {
         'secondary': '#1450A3',
         'tertiary': '#337CCF',
         'extra': '#FFC436'
-      }
+      },
+      boxShadow: {
+        'pageShadow': '0px -40px 50px #191D88'
+      },
+      backgroundSize: {
+        'size-200': '200% 200%',
+      },
+      backgroundPosition: {
+        'pos-0': '0% 0%',
+        'pos-100': '100% 100%',
+      },
     },
   },
   plugins: [],
