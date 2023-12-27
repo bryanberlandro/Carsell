@@ -129,3 +129,10 @@ utilityList[2].addEventListener('click', () => {
 })
 
 // Hero Section
+const carsellVideo = document.querySelector('.carsell-video')
+
+window.addEventListener('scroll', function(){
+    if(this.window.scrollY > 1000){
+        carsellVideo.setAttribute('controls', '')
+    }
+})
