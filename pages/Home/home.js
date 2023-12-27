@@ -166,9 +166,11 @@ btnHow[2].addEventListener('click', function(){
 
 
 const carsellVideo = document.querySelector('.carsell-video')
+const playBtn = document.querySelector('.play-btn')
 
 window.addEventListener('scroll', function(){
-    if(this.window.scrollY > 1000){
-        carsellVideo.setAttribute('autoplay', '')
+    if(this.window.scrollY > 1300){
+        // carsellVideo.setAttribute('autoplay', '')
+        playBtn.classList.replace('scale-0', 'scale-100')
     }
 })
