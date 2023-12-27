@@ -129,10 +129,46 @@ utilityList[2].addEventListener('click', () => {
 })
 
 // Hero Section
+
+// HOW SECTION
+const btnHow = document.querySelectorAll('.slide-btn-how')
+const howCard = document.querySelector('.how-card')
+
+btnHow[0].addEventListener('click', function(){
+    howCard.classList.remove('-translate-x-[66%]')
+    howCard.classList.remove('-translate-x-[33%]')
+    howCard.classList.add('-translate-x-[0%]')
+
+    btnHow[0].classList.add('bg-secondary')
+    btnHow[1].classList.remove('bg-secondary')
+    btnHow[2].classList.remove('bg-secondary')
+})
+btnHow[1].addEventListener('click', function(){
+    howCard.classList.remove('-translate-x-[0%]')
+    howCard.classList.remove('-translate-x-[66%]')
+    howCard.classList.add('-translate-x-[33%]')
+
+    btnHow[0].classList.remove('bg-secondary')
+    btnHow[1].classList.add('bg-secondary')
+    btnHow[2].classList.remove('bg-secondary')
+})
+btnHow[2].addEventListener('click', function(){
+    howCard.classList.remove('-translate-x-[33%]')
+    howCard.classList.remove('-translate-x-[0%]')
+    howCard.classList.add('-translate-x-[66%]')
+
+    btnHow[0].classList.remove('bg-secondary')
+    btnHow[1].classList.remove('bg-secondary')
+    btnHow[2].classList.add('bg-secondary')
+})
+
+// HOW SECTION
+
+
 const carsellVideo = document.querySelector('.carsell-video')
 
 window.addEventListener('scroll', function(){
     if(this.window.scrollY > 1000){
-        carsellVideo.setAttribute('controls', '')
+        carsellVideo.setAttribute('autoplay', '')
     }
 })
