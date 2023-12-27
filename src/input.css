@@ -6,3 +6,7 @@
     display: none;
 }
 
+h1 {
+    @apply text-dark
+}
+
