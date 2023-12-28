@@ -79,7 +79,7 @@ function showProfile(){
 function closeProfile(){
     setTimeout(()=> {
         profileContainer.classList.replace('flex', 'hidden')
-    }, 300)
+    }, 1000)
     profileContainer.classList.add('opacity-0')
     profileCard.classList.add('translate-x-[400px]')
 }
@@ -161,4 +161,35 @@ HowUtilityList[2].addEventListener('click', () => {
     HowUtilityDesc[1].classList.add('hidden')
     HowUtilityDesc[2].classList.toggle('hidden')
 })
+
+//utility 02 
+const HowUtilityList2 = document.querySelectorAll('.how-utility2')
+const HowUtilityDesc2 = document.querySelectorAll('.how-utility-desc2')
+
+HowUtilityList2[0].addEventListener('click', () => {
+    HowUtilityDesc2[0].classList.toggle('hidden')
+    HowUtilityDesc2[1].classList.add('hidden')
+    HowUtilityDesc2[2].classList.add('hidden')
+    HowUtilityDesc2[3].classList.add('hidden')
+})
+
+HowUtilityList2[1].addEventListener('click', () => {
+    HowUtilityDesc2[0].classList.add('hidden')
+    HowUtilityDesc2[1].classList.toggle('hidden')
+    HowUtilityDesc2[2].classList.add('hidden')
+    HowUtilityDesc2[3].classList.add('hidden')
+})
+HowUtilityList2[2].addEventListener('click', () => {
+    HowUtilityDesc2[0].classList.add('hidden')
+    HowUtilityDesc2[1].classList.add('hidden')
+    HowUtilityDesc2[2].classList.toggle('hidden')
+    HowUtilityDesc2[3].classList.add('hidden')
+})
+HowUtilityList2[3].addEventListener('click', () => {
+    HowUtilityDesc2[0].classList.add('hidden')
+    HowUtilityDesc2[1].classList.add('hidden')
+    HowUtilityDesc2[2].classList.add('hidden')
+    HowUtilityDesc2[3].classList.toggle('hidden')
+})
+
 
