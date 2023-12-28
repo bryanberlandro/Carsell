@@ -590,10 +590,11 @@
             <div class="relative w-full my-8 flex flex-col pt-14 items-center gap-8 xl:gap-12">
                 <h1 class="text-2xl font-bold md:text-3xl">How does it work?</h1>
 
-                <!-- Card -->
+                <!-- SLIDER -->
                 <div class="w-full overflow-hidden">
                     <div class="how-card w-[300%] transition-all duration-300 flex xl:w-full">
-
+                        
+                        <!-- Card -->
                         <div class="w-[100%] h-[50%] flex flex-col gap-4 items-center mt-8 justify-center">
                             <div class="w-44 h-36 relative md:w-64 md:h-44 ">
                                 <img src="/assets/images/car-anim-1.png" alt="" class="absolute w-full h-full object-cover">
@@ -619,6 +620,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="w-[100%] h-[50%] flex flex-col items-center mt-8 justify-center">
                             <div class="w-44 h-36 relative md:w-64 md:h-44 ">
                                 <img src="/assets/images/car-anim-3.png" alt="" class="absolute w-full h-full object-cover">
@@ -630,11 +632,12 @@
                                     <p class="text-sm md:text-base">We arrange all the paperwork, registration and delivery. all you need to do is enjoy your new car.</p>
                                 </div>
                             </div>
-                <!-- Card -->
-                <button class="bg-gradient-to-l from-primary to-tertiary py-3 px-7 rounded-md text-white font-medium md:py-4 md:font-semibold ">Want to know more?</button>
+                        </div>
+                        <!-- Card -->
+
+                    </div>
                 </div>
-                </div>
-                </div>
+                <!-- SLIDER -->
 
                 <!-- NAVIGATION -->
                 <div class="w-full relative flex justify-center gap-4 xl:hidden">
@@ -648,20 +651,22 @@
             </div>
             <!-- EXPLANATION -->
 
+            <!-- VIDEO -->
             <div class="relative w-full h-64 px-[5%] flex justify-center md:h-80">
                 <div class="w-96 h-48 rounded-md overflow-hidden relative shadow-xl md:w-full md:h-96 md:mt-4 xl:w-[600px] xl:h-80">
-                    <video class="carsell-video w-full">
+                    <video autoplay muted loop class="carsell-video w-full absolute">
                         <source src="/assets/videos/carsell.mp4" type="video/mp4" class="absolute w-full">
                     </video>
-                    <div class="w-full h-full relative flex justify-center items-center">
+                    <div class="w-full h-full relative flex justify-center items-center z-10">
                             <div class="play-btn rounded-full bg-tertiary px-3 py-3 scale-0 animate-pulse hover:animate-none transition-all duration-300 ease-in-out hover:bg-secondary hover:text-neutral-100 hover:scale-95  cursor-pointer md:px-6 md:py-6">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-secondary bg-white rounded-full md:w-14 md:h-14">
                                     <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" />
-                                </svg>                                                      
+                                </svg>    
                             </div>
                     </div>
                 </div>
             </div>
+            <!-- VIDEO -->
 
         </section>
         <!-- HOW DOES IT WORK SECTION -->

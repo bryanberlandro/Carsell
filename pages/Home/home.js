@@ -166,7 +166,7 @@ const carsellVideo = document.querySelector('.carsell-video')
 const playBtn = document.querySelector('.play-btn')
 
 window.addEventListener('scroll', function(){
-    if(this.window.scrollY > 1000){
+    if(this.window.scrollY > 1200){
         // carsellVideo.setAttribute('autoplay', '')
         playBtn.classList.replace('scale-0', 'scale-100')
     }
