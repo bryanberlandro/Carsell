@@ -162,13 +162,48 @@ btnHow[2].addEventListener('click', function(){
     btnHow[2].classList.add('bg-secondary')
 })
 
-// HOW SECTION
-
-
 const carsellVideo = document.querySelector('.carsell-video')
+const playBtn = document.querySelector('.play-btn')
 
 window.addEventListener('scroll', function(){
     if(this.window.scrollY > 1000){
-        carsellVideo.setAttribute('autoplay', '')
+        // carsellVideo.setAttribute('autoplay', '')
+        playBtn.classList.replace('scale-0', 'scale-100')
     }
 })
+// HOW SECTION
+
+
+// CAR AUDIT SECTION
+const auditBtn = document.querySelectorAll('.audit-btn')
+const auditSlider = document.querySelector('.audit-slider')
+
+auditBtn[0].addEventListener('click', function(){
+    auditSlider.classList.remove('-translate-x-[66%]')
+    auditSlider.classList.remove('-translate-x-[33%]')
+    auditSlider.classList.add('-translate-x-[0%]')
+
+    auditBtn[0].classList.add('bg-secondary')
+    auditBtn[1].classList.remove('bg-secondary')
+    auditBtn[2].classList.remove('bg-secondary')
+})
+auditBtn[1].addEventListener('click', function(){
+    auditSlider.classList.remove('-translate-x-[0%]')
+    auditSlider.classList.remove('-translate-x-[66%]')
+    auditSlider.classList.add('-translate-x-[33%]')
+
+    auditBtn[0].classList.remove('bg-secondary')
+    auditBtn[1].classList.add('bg-secondary')
+    auditBtn[2].classList.remove('bg-secondary')
+})
+auditBtn[2].addEventListener('click', function(){
+    auditSlider.classList.remove('-translate-x-[33%]')
+    auditSlider.classList.remove('-translate-x-[0%]')
+    auditSlider.classList.add('-translate-x-[66%]')
+
+    auditBtn[0].classList.remove('bg-secondary')
+    auditBtn[1].classList.remove('bg-secondary')
+    auditBtn[2].classList.add('bg-secondary')
+})
+// CAR AUDIT SECTION 
+

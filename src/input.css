@@ -6,3 +6,11 @@
     display: none;
 }
 
+.audit-slider-wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+h1 {
+    @apply text-dark
+}
+
