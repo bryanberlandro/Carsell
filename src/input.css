@@ -14,3 +14,24 @@ h1 {
     @apply text-dark
 }
 
+.reviewImg {
+    background:
+    linear-gradient(
+        to right ,
+        rgb(23 37 84 / 0.5),
+        rgb(0 0 0 / 0)
+    ),
+    url(/assets/images/person-make-a-deal-to-bought-car.jpg);
+    background-size: cover;
+}
+.reviewImgMobile {
+    background:
+    linear-gradient(
+        to right ,
+        rgb(23 37 84 / 0.5),
+        rgb(0 0 0 / 0)
+    ),
+    url(/assets/images/person-make-a-deal-to-bought-car.jpg) center left;
+    background-size: cover;
+}
+
