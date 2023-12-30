@@ -18,7 +18,7 @@ h1 {
     background:
     linear-gradient(
         to right ,
-        rgb(23 37 84 / 0.5),
+        rgb(23 37 84 / 0.9),
         rgb(0 0 0 / 0)
     ),
     url(/assets/images/person-make-a-deal-to-bought-car.jpg);
@@ -33,5 +33,9 @@ h1 {
     ),
     url(/assets/images/person-make-a-deal-to-bought-car.jpg) center left;
     background-size: cover;
+}
+
+.text-10xl {
+    font-size: 12rem;
 }
 

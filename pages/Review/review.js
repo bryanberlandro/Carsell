@@ -101,3 +101,25 @@ function showLogin(){
     }, 0)
 }
 // Profile > Login
+
+
+// Footer
+// Paralax
+const paralax = document.querySelector('.paralax');
+
+window.addEventListener('scroll', function() {
+    if(this.window.scrollY > 2750) {
+        paralax.classList.replace('translate-y-[10rem]', 'translate-y-[7rem]');
+    } else {
+        paralax.classList.replace('translate-y-[7rem]', 'translate-y-[10rem]');
+    }
+})
+window.addEventListener('scroll', function() {
+    if(this.window.scrollY > 2850) {
+        paralax.classList.replace('translate-y-[7rem]', 'translate-y-[2rem]');
+    } else {
+        paralax.classList.replace('translate-y-[2rem]', 'translate-y-[7rem]');
+    }
+})
+// Paralax End
+// Footer End
