@@ -121,5 +121,19 @@ window.addEventListener('scroll', function() {
         paralax.classList.replace('translate-y-[2rem]', 'translate-y-[7rem]');
     }
 })
+window.addEventListener('scroll', function() {
+    if(this.window.scrollY > 2950) {
+        paralax.classList.replace('translate-y-[2rem]', 'translate-y-0');
+    } else {
+        paralax.classList.replace('translate-y-0', 'translate-y-[2rem]');
+    }
+})
+window.addEventListener('scroll', function() {
+    if(this.window.scrollY > 3050) {
+        paralax.classList.replace('translate-y-0', 'translate-y-[-2rem]');
+    } else {
+        paralax.classList.replace('translate-y-[-2rem]', 'translate-y-0');
+    }
+})
 // Paralax End
 // Footer End
