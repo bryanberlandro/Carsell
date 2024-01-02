@@ -14,7 +14,6 @@
     <!-- FONT AWESOME -->
 </head>
 <body class="font-montserat overflow-x-hidden"> 
-    <header></header>
 
     <header class="text-primary w-full h-16 flex border-b-2 px-[5%] items-center bg-white fixed justify-between z-40">
         <div class="flex flex-row-reverse w-[60%] items-center justify-between h-full xl:flex-row xl:justify-start xl:gap-10">
@@ -33,7 +32,7 @@
                 <ul class="flex flex-col gap-6 font-medium xl:flex-row xl:text-sm xl:gap-10">
                     <h1 class="font-bold text-xl font-Russo tracking-widest italic xl:hidden">CARSELL</h1>
                     <li>
-                        <a href="/pages/Home/home.html">Home</a>
+                        <a aria-current="page" href="/pages/Home/home.html">Home</a>
                     </li>
                     <li>
                         <a href="">Buy</a>
@@ -1179,42 +1178,218 @@
         <!-- FINANCING -->
 
         <!-- SERVICES -->
-        <section>
+        <section id="services" class="h-[100vh] overflow-hidden transition-all duration-300 my-14 relative py-20 md:py-8 md:h-max">
             <div class="px-[5%] text-center space-y-2">
-                <h1 class="text-2xl font-bold">Comprehensive services just a few clicks away</h1>
-                <p class="text-sm">One-stop solution for all your needs, from the comfort of your home.</p>
+                <h1 class="text-2xl font-bold md:text-3xl">Comprehensive services just a few clicks away</h1>
+                <p class="text-sm md:text-base">One-stop solution for all your needs, from the comfort of your home.</p>
             </div>
-            <div class="flex flex-col gap-4 px-[5%] mt-8">
-                <div class="rounded-md w-full h-40 shadow-multiple flex justify-center items-start px-8 flex-col gap-6">
-                    <div class="flex gap-4 items-center">
+            <div class="flex flex-col gap-4 px-[5%] mt-8 md:flex-row md:flex-wrap md:w-full md:items-center md:mt-12 md:gap-y-6">
+                <!-- CARD -->
+                <div class="rounded-md w-full h-40 hover:scale-[.98] transition duration-300 hover:shadow-md focus:scale-[.98] shadow-multiple flex justify-center items-start px-8 flex-col gap-4 md:w-[48%]  md:gap-6 md:h-44 xl:w-[32%] xl:h-80 ">
+                    <div class="flex gap-4 items-center xl:flex-col xl:w-full">
                         <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-secondary xl:w-10 xl:h-10">
                                 <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
                                 <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z" clip-rule="evenodd" />
                             </svg>                              
                         </div>
-                        <h1 class="text-secondary font-semibold text-xl">Financing</h1>
+                        <h1 class="text-secondary font-semibold text-xl xl:text-2xl xl:font-bold">Financing</h1>
                         <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-secondary block xl:hidden">
                                 <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
                             </svg>
                         </div>
                     </div>
 
                     <div class="space-y-2">
-                        <div class="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-green-400">
+                        <div class="flex items-start gap-2 justify-start2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-green-400 xl:w-6 xl:h-6">
                                 <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
                             </svg>                              
-                            <p class="text-sm">Completely online within few hours</p>
+                            <p class="text-sm xl:text-base">Completely online within few hours</p>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-green-400">
+                        <div class="flex items-start gap-2 justify-start2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-green-400 xl:w-6 xl:h-6">
                                 <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
                             </svg>                              
-                            <p class="text-sm">Completely online within few hours</p>
+                            <p class="text-sm xl:text-base">Transparent, no fine print</p>
                         </div>
                     </div>
+                </div>
+
+                <div class="rounded-md w-full h-40 hover:scale-[.98] transition duration-300 hover:shadow-md focus:scale-[.98] shadow-multiple flex justify-center items-start px-8 flex-col gap-4 md:w-[48%]  md:gap-6 md:h-44 xl:w-[32%] xl:h-80 ">
+                    <div class="flex gap-4 items-center xl:flex-col xl:w-full">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-secondary xl:w-10 xl:h-10">
+                                <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
+                                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z" clip-rule="evenodd" />
+                            </svg>                              
+                        </div>
+                        <h1 class="text-secondary font-semibold text-xl xl:text-2xl xl:font-bold">CarAudit Inspection</h1>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-secondary block xl:hidden">
+                                <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-start gap-2 justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-green-400 xl:w-6 xl:h-6">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                            </svg>                              
+                            <p class="text-sm xl:text-base">Thorough vehicle check</p>
+                        </div>
+                        <div class="flex items-start gap-2 justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-green-400 xl:w-6 xl:h-6">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                            </svg>                              
+                            <p class="text-sm xl:text-base">Qualified mechanics and technicians</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-md w-full h-40 hover:scale-[.98] transition duration-300 hover:shadow-md focus:scale-[.98] shadow-multiple flex justify-center items-start px-8 flex-col gap-4 md:w-[48%]  md:gap-6 md:h-44 xl:w-[32%] xl:h-80 ">
+                    <div class="flex gap-4 items-center xl:flex-col xl:w-full">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-secondary xl:w-10 xl:h-10">
+                                <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
+                                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z" clip-rule="evenodd" />
+                            </svg>                              
+                        </div>
+                        <h1 class="text-secondary font-semibold text-xl xl:text-2xl xl:font-bold">Delivery</h1>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-secondary block xl:hidden">
+                                <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-start gap-2 justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-green-400 xl:w-6 xl:h-6">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                            </svg>                              
+                            <p class="text-sm xl:text-base">To your doorstep or a Pick-up point</p>
+                        </div>
+                        <div class="flex items-start gap-2 justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-green-400 xl:w-6 xl:h-6">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                            </svg>                              
+                            <p class="text-sm xl:text-base">Unbeatable price</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-md w-full h-40 hover:scale-[.98] transition duration-300 hover:shadow-md focus:scale-[.98] shadow-multiple flex justify-center items-start px-8 flex-col gap-4 md:w-[48%]  md:gap-6 md:h-44 xl:w-[32%] xl:h-80 ">
+                    <div class="flex gap-4 items-center xl:flex-col xl:w-full">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-secondary xl:w-10 xl:h-10">
+                                <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
+                                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z" clip-rule="evenodd" />
+                            </svg>                              
+                        </div>
+                        <h1 class="text-secondary font-semibold text-xl xl:text-2xl xl:font-bold">Warranty</h1>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-secondary block xl:hidden">
+                                <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-start gap-2 justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-green-400 xl:w-6 xl:h-6">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                            </svg>                              
+                            <p class="text-sm xl:text-base">Up to 36 months</p>
+                        </div>
+                        <div class="flex items-start gap-2 justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-green-400 xl:w-6 xl:h-6">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                            </svg>                              
+                            <p class="text-sm xl:text-base">For all vehicles</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-md w-full h-40 hover:scale-[.98] transition duration-300 hover:shadow-md focus:scale-[.98] shadow-multiple flex justify-center items-start px-8 flex-col gap-4 md:w-[48%]  md:gap-6 md:h-44 xl:w-[32%] xl:h-80 ">
+                    <div class="flex gap-4 items-center xl:flex-col xl:w-full">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-secondary xl:w-10 xl:h-10">
+                                <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
+                                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z" clip-rule="evenodd" />
+                            </svg>                              
+                        </div>
+                        <h1 class="text-secondary font-semibold text-xl xl:text-2xl xl:font-bold">Insurance</h1>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-secondary block xl:hidden">
+                                <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 w-full">
+                        <div class="flex items-start gap-2 justify-start ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-green-400 xl:w-6 xl:h-6">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                            </svg>                              
+                            <p class="text-sm xl:w-56 xl:text-base">Both third-party and comprehensive insurance</p>
+                        </div>
+                        <div class="flex items-start gap-2 justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-green-400 xl:w-6 xl:h-6">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                            </svg>                              
+                            <p class="text-sm xl:text-base">Great rates for everyone</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-md w-full h-40 hover:scale-[.98] transition duration-300 hover:shadow-md focus:scale-[.98] shadow-multiple flex justify-center items-start px-8 flex-col gap-4 md:w-[48%]  md:gap-6 md:h-44 xl:w-[32%] xl:h-80 ">
+                    <div class="flex gap-4 items-center xl:flex-col xl:w-full">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-secondary xl:w-10 xl:h-10">
+                                <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
+                                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z" clip-rule="evenodd" />
+                            </svg>                              
+                        </div>
+                        <h1 class="text-secondary font-semibold text-xl xl:text-2xl xl:font-bold">Vehicle Registration</h1>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-secondary block xl:hidden">
+                                <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-start gap-2 justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-green-400 xl:w-6 xl:h-6">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                            </svg>                              
+                            <p class="text-sm xl:text-base xl:w-52">Everything from emission-test to MOT</p>
+                        </div>
+                        <div class="flex items-start gap-2 justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-green-400 xl:w-6 xl:h-6">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                            </svg>                              
+                            <p class="text-sm xl:text-base">Car registered in your name</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD -->
+            </div>
+            <div class="w-full h-24 absolute bottom-0 bg-gradient-to-t from-white from-[60%] flex justify-center items-end md:hidden">
+                <div class="flex items-center w-full justify-center gap-2">
+                    <div class="w-[20%] h-1 rounded-md bg-gradient-to-l from-neutral-300"></div>
+                    <div onclick="showMoreServices()" class="rounded-md w-[40%] bg-white shadow-soft py-2 flex justify-center border-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 block down-review">
+                            <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
+                        </svg>   
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 hidden up-review">
+                            <path fill-rule="evenodd" d="M11.47 7.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z" clip-rule="evenodd" />
+                        </svg>                                             
+                    </div>
+                    <div class="w-[20%] h-1 rounded-md bg-gradient-to-r from-neutral-300"></div>
                 </div>
             </div>
         </section>
