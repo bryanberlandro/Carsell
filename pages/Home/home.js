@@ -207,3 +207,58 @@ auditBtn[2].addEventListener('click', function(){
 })
 // CAR AUDIT SECTION 
 
+
+// REVIEW SECTION 
+let reviewWrapper = document.querySelector('.review-wrapper')
+
+document.addEventListener('DOMContentLoaded', async function(){
+    const reviewData = await getReviewCarData()
+    updateReviewCard(reviewData)
+})
+
+function getReviewCarData(){
+    return fetch('/data/review.json')
+    .then(response => response.json())
+    .then(res => res)
+}
+
+function updateReviewCard(value){
+    let wrapper = ""
+    value.forEach(val => {
+        wrapper += reviewCard(val)
+    });
+    reviewWrapper.innerHTML += wrapper
+}
+
+function reviewCard(value){
+    return `<div class="w-80 h-[500px] rounded-md overflow-hidden shadow-multiple flex flex-col gap-2">
+                <div class="h-[40%] w-full overflow-hidden relative">
+                    <img src="${value.image}" alt="" class="absolute w-full h-full object-cover">
+                </div>
+                <div class="px-[5%]">
+                    <h1 class="font-semibold">${value.name}</h1>
+                    <div class="flex gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-yellow-300">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                        </svg>                              
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-yellow-300">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                        </svg>                              
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-yellow-300">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                        </svg>                              
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-yellow-300">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                        </svg>                              
+                    </div>
+                </div>
+                <div class="text-sm px-[5%] h-[40%] overflow-hidden">
+                    ${value.desc}
+                </div>
+                <div class="w-full border-t-2 px-[5%] flex justify-center flex-col h-[25%]">
+                    <h1>${value.type}</h1>
+                    <p class="text-sm text-tertiary ">Similiar cars ></p>
+                </div>
+            </div>`
+}
+

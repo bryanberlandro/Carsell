@@ -15,7 +15,8 @@ module.exports = {
         'dark': 'rgb(23 37 84)',
       },
       boxShadow: {
-        'pageShadow': '0px -40px 50px #191D88'
+        'soft': '0 5px 50px rgb(0, 67, 101, 8%)',
+        'multiple': '0 5px 50px rgb(0, 67, 101, 8%), 0 2px 6px rgb(130, 169, 188, 8%) '
       },
       backgroundSize: {
         'size-200': '200% 200%',
