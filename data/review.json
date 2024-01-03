@@ -2,11 +2,32 @@
     {
         "carId": 1,
         "userProfile": "/assets/images/profile-pic-1.jpg",
-        "name": "Ming Kheems.",
+        "name": "Ming Kheems",
         "desc": "I ordered a BMW E30 through Carsell. From the beginning of our communication, everything went quickly, correctly and reliably. Individual deadlines and steps performed by the Carsell company were respected on time and highly professional. I appreciated the vehicle inspection service, including a detailed protocol. I also made a small complaint, it was settled by agreement and promptly. I can recommend the Carsell company, and I will probably use their services again next time.",
         "image": "/assets/images/Review-BMWE30.webp",
         "type": "BMW E30",
-        "year": "1982"
+        "year": "1982",
+        "logo": "/assets/images/logo-bmw.png"
+    },
+    {
+        "carId": 2,
+        "userProfile": "/assets/images/profile-pic-1.jpg",
+        "name": "Robert Iskandar",
+        "desc": "I am very satisfied with the car, the company's service was also excellent, I recommend it.",
+        "image": "/assets/images/Review-GTRR35.jpg",
+        "type": "GTR R35",
+        "year": "2007",
+        "logo": "/assets/images/logo-nissanGTR.png"
+    },
+    {
+        "carId": 3,
+        "userProfile": "/assets/images/profile-pic-1.jpg",
+        "name": "Hame Leen",
+        "desc": "I bought a used BMW E36 through CARSELL. The whole process was very flexible, understandable and completely professional. It was completely comfortable handing over the vehicle with Mrs. Sakha, who very eruditely guided us through setting up the vehicle and getting to know the vehicle. She deserves a truly exceptional praise.",
+        "image": "/assets/images/Review-BMWE36.jpg",
+        "type": "BMW E36",
+        "year": "1990",
+        "logo": "/assets/images/logo-bmw.png"
     },
     {
         "carId": 1,
@@ -15,7 +36,8 @@
         "desc": "I ordered a BMW E30 through Carsell. From the beginning of our communication, everything went quickly, correctly and reliably. Individual deadlines and steps performed by the Carsell company were respected on time and highly professional. I appreciated the vehicle inspection service, including a detailed protocol. I also made a small complaint, it was settled by agreement and promptly. I can recommend the Carsell company, and I will probably use their services again next time.",
         "image": "/assets/images/Review-BMWE30.webp",
         "type": "BMW E30",
-        "year": "1982"
+        "year": "1982",
+        "logo": "/assets/images/logo-nissanGTR.png"
     },
     {
         "carId": 1,
@@ -24,7 +46,8 @@
         "desc": "I ordered a BMW E30 through Carsell. From the beginning of our communication, everything went quickly, correctly and reliably. Individual deadlines and steps performed by the Carsell company were respected on time and highly professional. I appreciated the vehicle inspection service, including a detailed protocol. I also made a small complaint, it was settled by agreement and promptly. I can recommend the Carsell company, and I will probably use their services again next time.",
         "image": "/assets/images/Review-BMWE30.webp",
         "type": "BMW E30",
-        "year": "1982"
+        "year": "1982",
+        "logo": "/assets/images/logo-nissanGTR.png"
     },
     {
         "carId": 1,
@@ -33,7 +56,8 @@
         "desc": "I ordered a BMW E30 through Carsell. From the beginning of our communication, everything went quickly, correctly and reliably. Individual deadlines and steps performed by the Carsell company were respected on time and highly professional. I appreciated the vehicle inspection service, including a detailed protocol. I also made a small complaint, it was settled by agreement and promptly. I can recommend the Carsell company, and I will probably use their services again next time.",
         "image": "/assets/images/Review-BMWE30.webp",
         "type": "BMW E30",
-        "year": "1982"
+        "year": "1982",
+        "logo": "/assets/images/logo-nissanGTR.png"
     },
     {
         "carId": 1,
@@ -42,7 +66,8 @@
         "desc": "I ordered a BMW E30 through Carsell. From the beginning of our communication, everything went quickly, correctly and reliably. Individual deadlines and steps performed by the Carsell company were respected on time and highly professional. I appreciated the vehicle inspection service, including a detailed protocol. I also made a small complaint, it was settled by agreement and promptly. I can recommend the Carsell company, and I will probably use their services again next time.",
         "image": "/assets/images/Review-BMWE30.webp",
         "type": "BMW E30",
-        "year": "1982"
+        "year": "1982",
+        "logo": "/assets/images/logo-nissanGTR.png"
     },
     {
         "carId": 1,
@@ -51,7 +76,8 @@
         "desc": "I ordered a BMW E30 through Carsell. From the beginning of our communication, everything went quickly, correctly and reliably. Individual deadlines and steps performed by the Carsell company were respected on time and highly professional. I appreciated the vehicle inspection service, including a detailed protocol. I also made a small complaint, it was settled by agreement and promptly. I can recommend the Carsell company, and I will probably use their services again next time.",
         "image": "/assets/images/Review-BMWE30.webp",
         "type": "BMW E30",
-        "year": "1982"
+        "year": "1982",
+        "logo": "/assets/images/logo-nissanGTR.png"
     },
     {
         "carId": 1,
@@ -60,7 +86,8 @@
         "desc": "I ordered a BMW E30 through Carsell. From the beginning of our communication, everything went quickly, correctly and reliably. Individual deadlines and steps performed by the Carsell company were respected on time and highly professional. I appreciated the vehicle inspection service, including a detailed protocol. I also made a small complaint, it was settled by agreement and promptly. I can recommend the Carsell company, and I will probably use their services again next time.",
         "image": "/assets/images/Review-BMWE30.webp",
         "type": "BMW E30",
-        "year": "1982"
+        "year": "1982",
+        "logo": "/assets/images/logo-nissanGTR.png"
     },
     {
         "carId": 1,
@@ -69,25 +96,8 @@
         "desc": "I ordered a BMW E30 through Carsell. From the beginning of our communication, everything went quickly, correctly and reliably. Individual deadlines and steps performed by the Carsell company were respected on time and highly professional. I appreciated the vehicle inspection service, including a detailed protocol. I also made a small complaint, it was settled by agreement and promptly. I can recommend the Carsell company, and I will probably use their services again next time.",
         "image": "/assets/images/Review-BMWE30.webp",
         "type": "BMW E30",
-        "year": "1982"
-    },
-    {
-        "carId": 1,
-        "userProfile": "/assets/images/profile-pic-1.jpg",
-        "name": "Ming Kheems.",
-        "desc": "I ordered a BMW E30 through Carsell. From the beginning of our communication, everything went quickly, correctly and reliably. Individual deadlines and steps performed by the Carsell company were respected on time and highly professional. I appreciated the vehicle inspection service, including a detailed protocol. I also made a small complaint, it was settled by agreement and promptly. I can recommend the Carsell company, and I will probably use their services again next time.",
-        "image": "/assets/images/Review-BMWE30.webp",
-        "type": "BMW E30",
-        "year": "1982"
-    },
-    {
-        "carId": 1,
-        "userProfile": "/assets/images/profile-pic-1.jpg",
-        "name": "Ming Kheems.",
-        "desc": "I ordered a BMW E30 through Carsell. From the beginning of our communication, everything went quickly, correctly and reliably. Individual deadlines and steps performed by the Carsell company were respected on time and highly professional. I appreciated the vehicle inspection service, including a detailed protocol. I also made a small complaint, it was settled by agreement and promptly. I can recommend the Carsell company, and I will probably use their services again next time.",
-        "image": "/assets/images/Review-BMWE30.webp",
-        "type": "BMW E30",
-        "year": "1982"
+        "year": "1982",
+        "logo": "/assets/images/logo-nissanGTR.png"
     },
     {
         "carId": 1,
@@ -97,6 +107,7 @@
         "image": "/assets/images/Review-BMWE30.webp",
         "type": "BMW E30",
         "similiar-image": "",
-        "year": "1982"
+        "year": "1982",
+        "logo": "/assets/images/logo-nissanGTR.png"
     }
 ]

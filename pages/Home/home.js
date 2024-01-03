@@ -253,42 +253,82 @@ function updateReviewCard(value){
 }
 
 function reviewCard(value){
-    return `<div class="w-80 h-[500px] rounded-md overflow-hidden shadow-multiple flex flex-col gap-2">
-                <div class="h-[40%] w-full overflow-hidden relative">
+    return `<div class="w-[100%] h-max rounded-md bg-white overflow-hidden shadow-multiple flex flex-col gap-4 md:w-[480px] xl:w-[550px]">
+                <div class="h-44 w-full overflow-hidden relative">
                     <img src="${value.image}" alt="" class="absolute w-full h-full object-cover">
                 </div>
-                <div class="px-[5%]">
+                <div class="px-[5%] ">
                     <div class="flex gap-2">
                         <div class="relative w-7 h-7 rounded-full overflow-hidden">
                             <img src="${value.userProfile}" class="absolute w-full"/>
                         </div>
-                        <h1 class="font-semibold">${value.name}</h1>
+                        <h1 class="font-semibold text-base">${value.name}</h1>
                     </div>
                     <div class="flex gap-1 mt-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-yellow-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-yellow-300">
                             <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
                         </svg>                              
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-yellow-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-yellow-300">
                             <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
                         </svg>                              
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-yellow-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-yellow-300">
                             <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
                         </svg>                              
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-yellow-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-yellow-300">
                             <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
                         </svg>                              
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-yellow-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-yellow-300">
                             <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
                         </svg>                              
                     </div>
                 </div>
-                <div class="text-sm px-[5%] h-[40%] overflow-hidden">
+                <div class="text-sm px-[5%] h-max overflow-hidden py-1">
                     ${value.desc}
                 </div>
-                <div class="w-full border-t-2 px-[5%] flex justify-center flex-col h-[25%]">
-                    <h1>${value.type}</h1>
-                    <p class="text-sm text-tertiary ">Similiar cars ></p>
+                <div class="w-full border-t-2 px-[5%] flex gap-4 py-4">
+                    <div class="relative w-10 h-10 overflow-hidden">
+                        <img src="${value.logo}" class="absolute w-full h-full object-cover"/>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h1 class="font-semibold">${value.type} ${value.year}</h1>
+                        <div class="flex gap-2 items-center text-tertiary group">
+                            <p class="text-xs font-medium transition-all duration-300">Similar cars</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 group-hover:w-8 transition-all duration-300">
+                                <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>`
 }
+
+const reviewSlideBtn = document.querySelectorAll('.review-slide-btn')
+
+reviewSlideBtn[0].addEventListener('click', function(){
+    reviewWrapper.classList.remove('-translate-x-[66%]')
+    reviewWrapper.classList.remove('-translate-x-[33%]')
+    reviewWrapper.classList.add('-translate-x-[0%]')
+
+    reviewSlideBtn[0].classList.add('bg-secondary')
+    reviewSlideBtn[1].classList.remove('bg-secondary')
+    reviewSlideBtn[2].classList.remove('bg-secondary')
+})
+reviewSlideBtn[1].addEventListener('click', function(){
+    reviewWrapper.classList.remove('-translate-x-[0%]')
+    reviewWrapper.classList.remove('-translate-x-[66%]')
+    reviewWrapper.classList.add('-translate-x-[33%]')
+
+    reviewSlideBtn[0].classList.remove('bg-secondary')
+    reviewSlideBtn[1].classList.add('bg-secondary')
+    reviewSlideBtn[2].classList.remove('bg-secondary')
+})
+reviewSlideBtn[2].addEventListener('click', function(){
+    reviewWrapper.classList.remove('-translate-x-[33%]')
+    reviewWrapper.classList.remove('-translate-x-[0%]')
+    reviewWrapper.classList.add('-translate-x-[66%]')
+
+    reviewSlideBtn[0].classList.remove('bg-secondary')
+    reviewSlideBtn[1].classList.remove('bg-secondary')
+    reviewSlideBtn[2].classList.add('bg-secondary')
+})
 
