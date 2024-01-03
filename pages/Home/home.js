@@ -332,3 +332,25 @@ reviewSlideBtn[2].addEventListener('click', function(){
     reviewSlideBtn[2].classList.add('bg-secondary')
 })
 
+
+// ADS SECTION
+const utilityListAds = document.querySelectorAll('.utility-ads')
+const utilityDescAds = document.querySelectorAll('.utility-ads-desc')
+
+utilityListAds[0].addEventListener('click', () => {
+    utilityDescAds[0].classList.toggle('hidden')
+    utilityDescAds[1].classList.add('hidden')
+    utilityDescAds[2].classList.add('hidden')
+})
+
+utilityListAds[1].addEventListener('click', () => {
+    utilityDescAds[0].classList.add('hidden')
+    utilityDescAds[1].classList.toggle('hidden')
+    utilityDescAds[2].classList.add('hidden')
+}
+)
+utilityListAds[2].addEventListener('click', () => {
+    utilityDescAds[0].classList.add('hidden')
+    utilityDescAds[1].classList.add('hidden')
+    utilityDescAds[2].classList.toggle('hidden')
+})
