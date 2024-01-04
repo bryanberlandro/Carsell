@@ -1,5 +1,7 @@
 // Header
 const sidebar = document.querySelector('.sidebar')
+const extraService = document.querySelector('.extra-service')
+const serviceNav = document.querySelector('.service-nav')
 
 function showSidebar(){
     sidebar.classList.remove('-translate-x-[250px]')
@@ -7,8 +9,36 @@ function showSidebar(){
 
 function closeSidebar(){
     sidebar.classList.add('-translate-x-[250px]')
+    if(extraService.classList.contains('block')){
+        extraService.classList.replace('block', 'hidden')
+    }
 }
-// Header
+
+function showExtraService(){
+
+    if(extraService.classList.contains('block')){
+        extraService.classList.replace('block', 'hidden')
+    } else {
+        extraService.classList.replace('hidden', 'block')
+    }
+}
+
+serviceNav.addEventListener('mouseover', function(){
+    extraService.classList.remove('xl:-translate-y-44', 'xl:opacity-0')
+})
+extraService.addEventListener('mouseover', function(){
+    extraService.classList.remove('xl:-translate-y-44', 'xl:opacity-0')
+})
+extraService.addEventListener('mouseleave', function(){
+    // extraService.classList.replace('block', 'hidden')
+    extraService.classList.add('xl:-translate-y-44', 'xl:opacity-0')
+})
+serviceNav.addEventListener('mouseleave', function(){
+    // extraService.classList.replace('block', 'hidden')
+    extraService.classList.add('xl:-translate-y-44', 'xl:opacity-0')
+})
+
+// Header End
 
 const loginContainer = document.querySelector('.login-container')
 const loginCard = document.querySelector('.login-card')

@@ -23,19 +23,19 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
                 </svg>                  
             </div>
-            <nav class="sidebar absolute top-0 left-0 bg-white w-52 h-[100vh] pt-10 pl-4 -translate-x-[250px] transition-all duration-500 ease-in-out shadow-md xl:relative xl:translate-x-0 xl:w-max xl:shadow-none xl:gap-14 xl:h-max xl:p-0">
+            <nav class="sidebar absolute top-0 left-0 bg-white w-56 h-[100vh] pt-10 px-4 -translate-x-[250px] transition-all duration-500 ease-in-out shadow-md xl:relative xl:translate-x-0 xl:w-max xl:shadow-none xl:gap-14 xl:h-max xl:p-0">
                 <div onclick="closeSidebar()" class="absolute block right-2 top-2 xl:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                     </svg>                  
                 </div>
-                <ul class="flex flex-col gap-6 font-medium xl:flex-row xl:text-sm xl:gap-10">
+                <ul class="flex flex-col gap-6 z-10 font-medium xl:flex-row xl:text-sm xl:gap-10">
                     <h1 class="font-bold text-xl font-Russo tracking-widest italic xl:hidden">CARSELL</h1>
                     <li>
                         <a aria-current="page" href="/pages/Home/home.html">Home</a>
                     </li>
                     <li>
-                        <a href="">Buy</a>
+                        <a href="/pages/Buy/buy.html">Buy</a>
                     </li>
                     <li>
                         <a href="/pages/How/how.html">How it works</a>
@@ -43,8 +43,29 @@
                     <li>
                         <a href="/pages/Review/review.html">Review</a>
                     </li>
-                    <li>
-                        <a href="">Services</a>
+                    <li class="relative">
+                        <div onclick="showExtraService()" class="service-nav flex items-center gap-2">
+                            <p>Services</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                                <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
+                            </svg>                              
+                        </div>
+                        <div class="extra-service transition-all hidden xl:block duration-500 absolute top-6 left-0 w-full xl:w-40 bg-slate-100 bg-opacity-95 rounded-md xl:bg-white xl:-translate-y-44 xl:opacity-0 shadow-multiple">
+                            <ul class="flex flex-col px-2 py-2">
+                                <li class="w-full py-2 hover:bg-slate-200 px-2 rounded-sm">
+                                    <a href="">CarAudit&trade;</a>
+                                </li>
+                                <li class="w-full py-2 hover:bg-slate-200 px-2 rounded-sm">
+                                    <a href="">Delivery</a>
+                                </li>
+                                <li class="w-full py-2 hover:bg-slate-200 px-2 rounded-sm">
+                                    <a href="">Financing</a>
+                                </li>
+                                <li class="w-full py-2 hover:bg-slate-200 px-2 rounded-sm">
+                                    <a href="">Warranty</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </nav>
@@ -125,7 +146,7 @@
 
     <!-- LOGIN FEATURE -->
     <div class="login-container opacity-0 transition-all duration-300 w-full  hidden h-[100vh] fixed bg-slate-300 bg-opacity-35 backdrop-blur-sm z-50 md:justify-center  md:items-center ">
-            <div class="login-card fixed translate-y-[800px] transition-all duration-500 h-[80vh] pb-4 bottom-0 w-full bg-white z-50 rounded-t-xl overflow-hidden md:w-[60%] md:h-max md:translate-y-0 md:py-4 md:relative md:inset-0 md:rounded-lg xl:w-[30%]">
+            <div class="login-card fixed translate-y-[800px] transition-all duration-500 h-[80vh] pb-4 w-full bg-white z-50 rounded-t-xl overflow-hidden md:w-[60%] md:h-max md:translate-y-0 md:relative md:inset-0 md:rounded-lg xl:w-[30%]">
                 <!-- top -->
                 <div class="flex flex-col gap-6 w-full bg-slate-50">
                     <div class="w-full flex justify-between p-4 md:px-8">
@@ -647,7 +668,7 @@
                 </div>
                 <!-- NAVIGATION -->
 
-                <button class="bg-gradient-to-l from-primary to-tertiary py-3 px-7 rounded-md text-white font-medium">Want to know more?</button>
+                <button class="bg-gradient-to-l from-primary to-tertiary py-3 px-7 rounded-md text-white font-medium"><a href="/pages/How/how.html">Want to know more?</a></button>
             </div>
             <!-- EXPLANATION -->
 
@@ -683,7 +704,7 @@
                 <div class="w-full bg-white px-[7%] pb-6 flex flex-col gap-10 md:w-[80%] md:py-5 xl:py-0 xl:px-14 xl:w-[40%]">
                     <div class="space-y-2 md:space-y-3">
                         <h1 class="font-bold text-2xl md:text-3xl">A thorough car inspection - CarAudit&trade;</h1>
-                        <p class="text-sm text-primary font-normal ">A qualified mechanic will thoroughly inspect your chosen car. You will receive a detailed report about the technical condition of the car, photo documentation, and our advice. You just take your time and decide</p>
+                        <p class="text-sm font-normal ">A qualified mechanic will thoroughly inspect your chosen car. You will receive a detailed report about the technical condition of the car, photo documentation, and our advice. You just take your time and decide</p>
                     </div>
                     <button class="bg-gradient-to-l from-primary to-tertiary py-4 px-6 rounded-md text-white font-medium md:w-72">More about CarAudit</button>
                     <div class="hidden xl:block border-t-2 text-sm py-6 pr-8">
@@ -1672,6 +1693,8 @@
             </div>
         </div>
     </footer>
+
+
     <script src="home.js"></script>
 </body>
 </html>

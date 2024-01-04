@@ -1,0 +1,20 @@
+[
+    {
+        "id" : 1,
+        "name": "BMW E30",
+        "mileage": 54340,
+        "price": 438000000,
+        "firstRegistration": {
+            "month": 8,
+            "year": 2018
+        },
+        "power": 66,
+        "fuel": "Gasoline",
+        "consumption": "42 / 100",
+        "bodyStyle": "Coupe",
+        "door": "two",
+        "driveType": "4x2",
+        "transmition": "4-speed automatic",
+        "image": "/assets/images/Review-BMWE30.webp"
+    }
+]
