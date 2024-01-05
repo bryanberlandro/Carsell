@@ -269,41 +269,69 @@
 
 
     <main class="px-[5%] bg-tertiary bg-opacity-5 w-full h-[100vh]">
-        <div>
-            <aside class="filter-container transition-all duration-300 z-50 bg-white w-full h-[100vh] absolute inset-0 -translate-x-96">
-                <div class="w-full px-[5%] flex justify-between items-center py-4">
-                    <h1 class="font-bold text-lg">Filter</h1>
-                    <div onclick="hideFilter()">
+        <section class="xl:flex xl:gap-6">
+
+            <!-- FILTER -->
+            <aside class="filter-container transition-all duration-300 z-50 bg-white w-full h-[100vh] fixed inset-0 -translate-x-[500px] md:w-96 xl:translate-x-0 xl:relative xl:h-[100vh] xl:shadow-multiple xl:z-0 xl:mt-32 xl:rounded-md xl:w-[25%]">
+                <div class="w-full px-[5%] flex justify-between items-center py-4 md:py-8 md:px-8 xl:px-[5%]">
+                    <h1 class="font-bold text-lg xl:text-xl">Filter</h1>
+                    <div onclick="hideFilter()" class="block xl:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                             <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                         </svg>                          
                     </div>
                 </div>
-            </aside>
 
-            <section class="w-full pt-32">
+                <div class="w-full px-[5%] flex flex-col gap-3">
+                    <div class="w-full flex flex-col gap-1">
+                        <label for="carModel" class="text-sm font-medium">MAKE AND MODEL</label>
+                        <input type="text" placeholder="add a car" name="carModel" class="w-full rounded-md px-2 py-2 border-2"> 
+                    </div>
+
+                    <div class="w-full flex flex-col gap-1">
+                        <p class="text-sm font-medium">PRICE</p>
+                        <div class="flex">
+                            <input type="text" class="border-2 w-[50%] py-2 px-2" placeholder="From">
+                            <input type="text" class="border-2 w-[50%] py-2 px-2" placeholder="To">
+                        </div>
+                    </div>
+                </div>
+
+
+            </aside>
+            <!-- FILTER -->
+
+            <section class="w-full pt-32 xl:w-[75%]">
                 <div class="flex flex-col gap-2 w-full">
 
                     <!-- TUTORIAL -->
-                    <div class="w-full bg-white rounded-md shadow-multiple relative flex justify-between px-4 items-center h-16">
-                        <h1 class="font-semibold">How to buy a car online</h1>
-                        <div class="flex gap-3 items-center text-secondary">
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                                    <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                                </svg>                                  
+                    <div class="w-full bg-white rounded-md shadow-multiple relative h-max flex flex-col px-4 overflow-hidden transition-all duration-300">
+                        <div class="w-full flex justify-between h-16 items-center z-10 bg-white">
+                            <h1 class="font-semibold">How to buy a car online</h1>
+                            <div class="flex gap-3 items-center text-secondary">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                        <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                    </svg>                                  
+                                </div>
+                                <div onclick="showTutorial()" class="border-[1px] rounded-md p-1 border-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="tutor-down block w-5 h-5">
+                                        <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
+                                    </svg>   
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="tutor-up hidden w-5 h-5">
+                                        <path fill-rule="evenodd" d="M11.47 7.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z" clip-rule="evenodd" />
+                                    </svg>                                                                     
+                                </div>
                             </div>
-                            <div class="border-[1px] rounded-md p-1 border-secondary">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                                    <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
-                                </svg>                                  
-                            </div>
+                        </div>
+                        <div class="tutorial w-full h-44 -mt-44 bg-slate-200 transition-all duration-300">
+
                         </div>
                     </div>
                     <!-- TUTORIAL -->
 
                     <!-- CAR LIST -->
-                    <div class="mt-6">
+                    <div class="mt-6 md">
 
                         <!-- TITLE -->
                         <div class="space-y-3">
@@ -320,86 +348,18 @@
                         </div>
                         <!-- TITLE -->
 
-                        <div class="w-full rounded-md overflow-hidden h-96 bg-white shadow-multiple mt-6">
-                            <div class="h-52 relative overflow-hidden">
-                                <div class="absolute right-3 top-2 z-10 p-1 border-1 bg-slate-500 bg-opacity-30 backdrop-blur-sm text-white rounded-md ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                                    </svg>                                      
-                                </div>
-                                <img src="/assets/images/nissan-1.jpg" alt="" class="absolute w-full h-full object-cover">
-                            </div>
-                            <div class="px-3 py-3">
-                                <h1 class="font-bold text-xl">Nissan Navara DC PLAT B</h1>
+                        <!-- CARD WRAPPER -->
+                        <div class="card-wrapper flex flex-col gap-4 mt-6 md:flex-row md:flex-wrap md:justify-between xl:gap-y-4">
 
-                                <!-- ENGINE -->
-                                <div class="flex flex-wrap w-full mt-2 justify-between  gap-y-1">
-
-                                    <!-- POWER -->
-                                    <div class="flex gap-1 w-24  text-sm font-medium">
-                                        <div class="w-5 h-5 relative">
-                                            <img src="/assets/images/icons8-engine-50.png" alt="">
-                                        </div>
-                                        <p>190 hp</p>
-                                    </div>
-                                    <!-- POWER -->
-
-                                    <!-- RELEASE DATE -->
-                                    <div class="flex gap-1 w-24 text-sm font-medium">
-                                        <div class="w-5 h-5 relative">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
-                                            </svg>
-                                        </div>
-                                        <p>10/2018</p>
-                                    </div>
-                                    <!-- RELEASE DATE -->
-
-                                    <!-- KM -->
-                                    <div class="flex gap-1 w-26  text-sm font-medium">
-                                        <div class="w-5 h-5 relative">
-                                            <img src="/assets/images/icons8-road-50.png" alt="">
-                                        </div>
-                                        <p>132 632 km</p>
-                                    </div>
-                                    <!-- KM -->
-
-                                    <!-- MANUAL MATIC -->
-                                    <div class="flex gap-1 w-24  text-sm font-medium">
-                                        <div class="w-5 h-5 relative">
-                                            <img src="/assets/images/icons8-engine-50.png" alt="">
-                                        </div>
-                                        <p>Automatic</p>
-                                    </div>
-                                    <!-- MANUAL MATIC -->
-
-                                    <!-- FUEL -->
-                                    <div class="flex gap-1 w-24  text-sm font-medium">
-                                        <div class="w-5 h-5 relative">
-                                            <img src="/assets/images/icons8-car-50.png" alt="">
-                                        </div>
-                                        <p>Diesel</p>
-                                    </div>
-                                    <!-- FUEL -->
-
-                                    <!-- SIZE -->
-                                    <div class="flex gap-1 w-24  text-sm font-medium">
-                                        <div class="w-5 h-5 relative">
-                                            <img src="/assets/images/icons8-car-seat-50.png" alt="">
-                                        </div>
-                                        <p>4x4</p>
-                                    </div>
-                                    <!-- SIZE -->
-                                </div>
-                                <!-- ENGINE -->
-
-                            </div>
                         </div>
+                        
+                        <!-- CARD WRAPPER -->
+
                     </div>
                     <!-- CAR LIST -->
                 </div>
             </section>
-        </div>
+        </section>
     </main>
 
     <script src="buy.js"></script>
