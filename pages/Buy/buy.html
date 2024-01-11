@@ -272,8 +272,8 @@
         <section class="xl:flex xl:gap-6 xl:pt-20">
 
             <!-- FILTER -->
-            <aside class="filter-container transition-all duration-300 z-50 bg-white w-full h-[100vh] fixed inset-0 -translate-x-[500px] md:w-96 xl:translate-x-0 xl:relative xl:h-[100vh] xl:shadow-multiple xl:z-0 xl:mt-0 xl:rounded-md xl:w-[25%]">
-                <div class="w-full px-[5%] flex justify-between items-center py-4 md:py-8 md:px-8 xl:px-[5%]">
+            <aside class="filter-container transition-all duration-300 z-50 bg-white w-full h-[100vh] overflow-y-scroll fixed inset-0 -translate-x-[500px] md:w-96 xl:translate-x-0 xl:relative xl:overflow-hidden xl:h-[140vh] xl:shadow-multiple xl:z-0 xl:mt-0 xl:rounded-md xl:w-[25%]">
+                <div class="w-full px-[5%] fixed flex shadow-soft justify-between bg-white z-10 border-b-2 items-center py-4 md:py-8 md:px-8 xl:px-[5%] xl:relative xl:py-4">
                     <h1 class="font-bold text-lg xl:text-xl">Filter</h1>
                     <div onclick="hideFilter()" class="block xl:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -282,7 +282,7 @@
                     </div>
                 </div>
 
-                <div class="w-full px-[5%] flex flex-col gap-3">
+                <div class="w-full px-[5%] flex flex-col gap-3 mt-20 h-max xl:mt-7">
                     <div class="make-filter-input w-full flex flex-col gap-1 relative">
                         <label for="carModel" class="text-sm font-medium">MAKE</label>
                         <input type="text" placeholder="select car" name="carModel" class="make-input w-full rounded-md px-2 py-2 border-2"> 
@@ -299,20 +299,40 @@
                         </div>
                     </div>
 
-                    <div class="transmission-wrapper ">
+                    <div class="transmission-wrapper flex flex-col gap-1">
                         <h1 class="text-sm font-medium">TRANSMISSION</h1>
                         <div class="transmission-filter flex w-full gap-2">
                         
                         </div>
                     </div>
-                    <div class="fuel-wrapper ">
+
+                    <div class="fuel-wrapper flex flex-col gap-1">
                         <h1 class="text-sm font-medium">FUEL TYPE</h1>
                         <div class="fuel-filter flex w-full gap-2">
                         
                         </div>
                     </div>
+
+                    <div class="color-wrapper flex flex-col gap-1">
+                        <h1 class="text-sm font-medium">EXTERIOR COLOR</h1>
+                        <div class="color-filter flex flex-wrap w-full gap-2">
+                        
+                        </div>
+                    </div>
+
+                    <div class="feature-wrapper flex flex-col gap-1">
+                        <h1 class="text-sm font-medium">FEATURES</h1>
+                        <div class="feature-filter flex flex-wrap w-full gap-2">
+                        
+                        </div>
+                    </div>
                 </div>
 
+                <div class="fixed bottom-0 flex justify-center shadow-soft w-full border-t-2 py-4 bg-white">
+                    <button class="w-72 py-3 bg-gradient-to-l from-primary to-tertiary rounded-md font-medium text-white px-4">
+                        1 234 56 offers
+                    </button>
+                </div>
 
             </aside>
             <!-- FILTER -->
@@ -379,7 +399,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-secondary">
                                 <path fill-rule="evenodd" d="M11.47 2.47a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06l-6.22-6.22V21a.75.75 0 0 1-1.5 0V4.81l-6.22 6.22a.75.75 0 1 1-1.06-1.06l7.5-7.5Z" clip-rule="evenodd" />
                             </svg>    
-                             <p class="font-semibold text-secondary">Back to top</p>                         
+                            <p class="font-semibold text-secondary">Back to top</p>                         
                         </div>
 
                         <div class="flex gap-4 items-center">

@@ -145,6 +145,7 @@ let currentFilter = {
     model: [],
     transmission: [],
     fuelType: [],
+    color: [],
     features: []
 }
 const cardWrapper = document.querySelector('.card-wrapper')
@@ -156,6 +157,8 @@ const totalCars = document.querySelector('.total-cars')
 const makeInputValue = document.querySelector('.make-input')
 const transmissionFilter = document.querySelector('.transmission-filter')
 const fuelTypeFilter = document.querySelector('.fuel-filter')
+const colorFilterWrapper = document.querySelector('.color-filter')
+const featureFilterWrapper = document.querySelector('.feature-filter')
 
 function rupiah(number){
     return new Intl.NumberFormat("id-ID", {
@@ -169,6 +172,9 @@ fetch("/data/car.json")
 .then(async (response) => {
     carData = await response.json()
     carData.map(car => createCars(car))
+
+
+    // ...new Set => get all data, and remove duplicate data
 
     makeData = [
         ...new Set(
@@ -200,31 +206,65 @@ fetch("/data/car.json")
         )
     ]
     fuelTypeData.map(fuel => createFilterBtn("fuelType", fuel, fuelTypeFilter))
+
+    exteriorColorData = [
+        ...new Set(
+            carData.map(car => car.color)
+        )
+    ]
+    exteriorColorData.map(color => createFilterBtn("color", color, colorFilterWrapper))
+
+    featuresData = [
+        ...new Set(
+            carData.map(car => car.features)
+            .reduce((acc, curVal) => acc.concat(curVal), [])
+        )
+    ]
+    featuresData.map(feature  => createFilterBtn("features", feature, featureFilterWrapper))
 })
 
 const createFilterBtn = (key, param, container) => {
     const filterBtn = document.createElement("button")
     filterBtn.setAttribute("data-state", "inactive")
     filterBtn.innerText = param
-    filterBtn.className = "w-full text-start py-4 px-4 hover:bg-slate-100"
+    filterBtn.className = "transition duration-300 w-full text-start py-4 px-4 hover:bg-slate-100"
     filterBtn.addEventListener("click", (e) => {
         handleClickBtn(e, key, param, container)
     })
     if(key == "transmission"){
-        filterBtn.className = "border-2 py-2 px-4 hover:bg-slate-100 rounded-md mt-2"
+        filterBtn.className = `relative border-2 py-2 px-4 hover:bg-slate-100 rounded-md mt-2`
     }
     if(key == "fuelType"){
         filterBtn.className = "border-2 py-2 px-4 hover:bg-slate-100 rounded-md mt-2"
     }
+    if(key == "color"){
+        filterBtn.className = `rounded-full relative text-transparent border-2 ${param}Car  w-8 h-8 mt-2 p-0 hover:after:border-2 after:top-10 after:absolute after:p-2 after:w-20 hover:after:text-black  hover:after:content-['${param}'] after:z-10`
+    }
+    if(key == "features"){
+        if(param >= 10){
+            // container.classList.add = `h-44 overfllow-hidden`
+            console.log("oke")
+        }
+        filterBtn.className = `relative border-2 py-2 px-4 hover:bg-slate-100 rounded-md mt-2`
+    }
     container.append(filterBtn)
 }
+
+// const createColorFilterBtn = (key, param, container) => {
+//     const filterBtn = document.createElement("button")
+
+// }
 
 const handleClickBtn = (e, key, param, container) => {
     const button = e.target
     const btnState = button.getAttribute("data-state")
     if(btnState == "inactive"){
-        button.classList.add("bg-slate-200", "scale-[.98]", "outline", "outline-offset-2", "outline-slate-50")
+        button.classList.add("bg-slate-200", "scale-[.95]", "outline", "outline-offset-2", "outline-slate-50")
         button.setAttribute("data-state", "active")
+
+        if(key == "color"){
+            button.classList.add("scale-[.90]", "outline", "outline-offset-2", "outline-slate-100")
+        }
 
         //ketika di klik push value(e.g 'matic') dari button ke dalam currentFilter[key => nama = "transmission", "make", "features"]
         
@@ -233,6 +273,9 @@ const handleClickBtn = (e, key, param, container) => {
     } else {
         button.classList.remove("bg-slate-200", "scale-[.98]", "outline", "outline-offset-2", "outline-slate-50")
         button.setAttribute("data-state", "inactive")
+        if(key == "color"){
+            button.classList.remove("scale-[.90]", "outline", "outline-offset-2", "outline-slate-100")
+        }
 
         // Ketika di klik lagi hilangkan value dari key 
         makeInputValue.value = ""
@@ -336,8 +379,8 @@ const createCars = (carsData) => {
 
                         <!-- SIZE -->
                         <div class="flex gap-1 text-sm font-medium">
-                            <div class="w-5 h-5 relative">
-                                <img src="/assets/images/icons8-car-seat-50.png" alt="">
+                            <div class="w-5 h-5 relative rounded-full border-2 ${color}Car">
+                                
                             </div>
                             <p>${color}</p>
                         </div>

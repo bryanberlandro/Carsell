@@ -10,6 +10,25 @@
     display: none;
 }
 
+.SilverCar {
+    @apply bg-gradient-to-l from-slate-200
+}
+.RedCar {
+    @apply bg-gradient-to-l from-red-700 to-red-300
+}
+.BlueCar {
+    @apply bg-gradient-to-l from-sky-600 to-sky-300
+}
+.BlackCar {
+    @apply bg-gradient-to-l from-zinc-950 to-zinc-600
+}
+.GrayCar {
+    @apply bg-gradient-to-l from-gray-600 to-gray-400
+}
+.GreenCar {
+    @apply bg-gradient-to-l from-green-700 to-green-500
+}
+
 h1 {
     @apply text-dark
 }

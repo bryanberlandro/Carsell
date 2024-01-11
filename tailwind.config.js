@@ -13,6 +13,8 @@ module.exports = {
         'tertiary': '#337CCF',
         'extra': '#FFC436',
         'dark': 'rgb(23 37 84)',
+        'BlueCar': '#337CCF',
+        'RedCar': '#dc2626',
       },
       boxShadow: {
         'soft': '0 5px 50px rgb(0, 67, 101, 8%)',
