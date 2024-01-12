@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "emulator.emulatorPathWindows": "C:\\Users\\Sakha naufal huda\\AppData\\Local\\android\\Sdk\\emulator"
 }
