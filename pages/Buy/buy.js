@@ -303,7 +303,10 @@ const handleFilterCars = (filters) => {
     totalCars.innerText = filteredCars.length
     cardWrapper.innerHTML = ""
     filteredCars.map(cars => createCars(cars))
+
 }
+
+
 
 const createCars = (carsData) => {
     const {make, model, year, fuelType, mileage, transmission, horsepower, features, color, image, price} = carsData

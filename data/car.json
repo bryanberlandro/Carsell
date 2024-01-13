@@ -57,7 +57,7 @@
             "Heated Seats"
         ],
         "owners": 1,
-        "image": "/assets/images/Review-MustangShelbyGT500CR.jpg"
+        "image": "/assets/images/ford-mustang-red.jpg"
     },
     {
         "id": 4,
@@ -77,7 +77,7 @@
             "Wi-Fi Hotspot"
         ],
         "owners": 2,
-        "image": "/assets/images/Review-GTRR35.jpg"
+        "image": "/assets/images/chevrolet-equinox-blue.jpg"
     },
     {
         "id": 5,
@@ -97,7 +97,7 @@
             "Lane Keeping Assist"
         ],
         "owners": 1,
-        "image": "/assets/images/nissan-1.jpg"
+        "image": "/assets/images/nissan-altima-black.jpg"
     },
     {
         "id": 6,
@@ -117,7 +117,7 @@
             "Parking Assistance"
         ],
         "owners": 1,
-        "image": "/assets/images/Review-GTRR35.jpg"
+        "image": "/assets/images/bmw-3series-white.webp"
     },
     {
         "id": 7,
@@ -137,7 +137,7 @@
             "Premium Audio System"
         ],
         "owners": 1,
-        "image": "/assets/images/Review-GTRR35.jpg"
+        "image": "/assets/images/tesla-model3-red.jpg"
     },
     {
         "id": 8,
@@ -157,7 +157,7 @@
             "Apple CarPlay"
         ],
         "owners": 1,
-        "image": "/assets/images/Review-GTRR35.jpg"
+        "image": "/assets/images/audi-q5-gray.jpg"
     },
     {
         "id": 9,
@@ -177,7 +177,7 @@
             "Air Suspension"
         ],
         "owners": 2,
-        "image": "/assets/images/Review-GTRR35.jpg"
+        "image": "/assets/images/mercy-eclass-silver.png"
     },
     {
         "id": 10,
@@ -217,7 +217,7 @@
             "Adaptive Cruise Control"
         ],
         "owners": 1,
-        "image": "/assets/images/Review-GTRR35.jpg"
+        "image": "/assets/images/subaru-outback-green.jpg"
     },
     {
         "id": 12,
@@ -237,7 +237,7 @@
             "Mark Levinson Audio"
         ],
         "owners": 1,
-        "image": "/assets/images/Review-GTRR35.jpg"
+        "image": "/assets/images/lexus-rx350-white.jpg"
     },
     {
         "id": 13,
@@ -257,7 +257,7 @@
             "Sync 3 Infotainment"
         ],
         "owners": 1,
-        "image": "/assets/images/Review-GTRR35.jpg"
+        "image": "/assets/images/ford-f150-blue.webp"
     },
     {
         "id": 14,
@@ -277,7 +277,7 @@
             "Gesture Control"
         ],
         "owners": 1,
-        "image": "/assets/images/Review-GTRR35.jpg"
+        "image": "/assets/images/bmw-x5-black.png"
     },
     {
         "id": 15,
@@ -337,7 +337,7 @@
             "Panoramic Roof"
         ],
         "owners": 1,
-        "image": "/assets/images/Review-GTRR35.jpg"
+        "image": "/assets/images/tesla-modelY-red.jpg"
     },
     {
         "id": 18,
@@ -417,7 +417,7 @@
             "Parking Assistance"
         ],
         "owners": 1,
-        "image": "/assets/images/Review-GTRR35.jpg"
+        "image": "/assets/images/bmw-4series-blue.webp"
     },
     {
         "id": 22,
@@ -497,7 +497,7 @@
             "Power Liftgate"
         ],
         "owners": 1,
-        "image": "/assets/images/Review-GTRR35.jpg"
+        "image": "/assets/images/ford-explorer-blue.jpg"
     },
     {
         "id": 26,
@@ -517,7 +517,7 @@
             "Bose Premium Audio"
         ],
         "owners": 1,
-        "image": "/assets/images/Review-GTRR35.jpg"
+        "image": "/assets/images/chevrolet-camaro-red.jpg"
     },
     {
         "id": 27,
@@ -557,7 +557,7 @@
             "Starlink Infotainment"
         ],
         "owners": 1,
-        "image": "/assets/images/Review-GTRR35.jpg"
+        "image": "/assets/images/subaru-forester-green.jpg"
     },
     {
         "id": 29,
